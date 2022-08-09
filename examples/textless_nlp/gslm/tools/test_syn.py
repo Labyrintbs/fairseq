@@ -8,7 +8,6 @@ import gc
 import logging
 import os
 import sys
-sys.path.append("/home/si/intern/zhang_leiting/_codes/fairseq-main/")
 
 import joblib
 import soundfile as sf
@@ -104,7 +103,7 @@ def main(args, logger):
     iters = 0
     while True:
         in_file_path = '/home/si/intern/zhang_leiting/output/sample.input.wav'
-        out_file_path = '/home/si/intern/zhang_leiting/output/sample.output2_layer6.wav'
+        out_file_path = '/home/si/intern/zhang_leiting/output/sample.output2_layer6_fhm.wav'
         feats = reader.get_feats(in_file_path).cpu().numpy()
         iters += 1
         if iters == 1000:
